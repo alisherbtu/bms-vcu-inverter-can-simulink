@@ -1,0 +1,23 @@
+VERSION ""
+
+NS_ :
+
+BS_:
+
+BU_: BMS VCU INV
+
+BO_ 256 BMS_Status: 8 BMS
+ SG_ Vcell : 0|16@1+ (0.001,0) [0|65.535] "V" VCU
+ SG_ Icell : 16|16@1- (0.1,0) [-3276.8|3276.7] "A" VCU
+ SG_ SOC : 32|8@1+ (0.5,0) [0|127.5] "%" VCU
+ SG_ Temp : 40|8@1+ (1,-40) [-40|215] "degC" VCU
+
+BO_ 257 BMS_Limits: 8 BMS
+ SG_ Imax_dis : 0|16@1+ (0.1,0) [0|6553.5] "A" VCU
+ SG_ DischargeEnable : 16|8@1+ (1,0) [0|1] "" VCU
+ SG_ Warning : 24|8@1+ (1,0) [0|3] "" VCU
+ SG_ AliveCounter : 32|8@1+ (1,0) [0|255] "" VCU
+
+BO_ 512 VCU_Command: 8 VCU
+ SG_ Icmd : 0|16@1+ (0.1,0) [0|6553.5] "A" INV
+ SG_ CmdEnable : 16|8@1+ (1,0) [0|1] "" INV
